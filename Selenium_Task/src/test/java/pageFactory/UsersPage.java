@@ -19,6 +19,9 @@ public class UsersPage {
     @FindBy(xpath = "//*[@id=\"dialogDeleteBtn\"]")
     WebElement okButton;
 
+    @FindBy(xpath = "//*[@id=\"searchSystemUser_userName\"]")
+    WebElement usernameField;
+
     WebDriver driver;
 
     public UsersPage(WebDriver driver){
@@ -43,11 +46,15 @@ public class UsersPage {
     }
 
     public void clickOnUsernameField(String Name){
-        driver.findElement(By.xpath("//a[contains(text(), '"+Name+"')]")).click();
+        usernameField.click();
+    }
+
+    public void enterUsername(String username){
+        this.usernameField.sendKeys(username);
     }
 
     public boolean checkIfNameDisplayed(String Name){
-        return !driver
+        return driver
                 .findElements(By.xpath("//a[contains(text(), '"+Name+"')]")).isEmpty();
     }
 
