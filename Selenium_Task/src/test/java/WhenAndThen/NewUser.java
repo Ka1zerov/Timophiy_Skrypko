@@ -72,28 +72,30 @@ public class NewUser {
     public void entersNameUsernamePasswordConfirmedPassword(){
         addUsersPage = new AddUsersPage(driver);
         addUsersPage.usersNameTextInput("Cassidy Hope");
-        addUsersPage.usersUsernameTextInput("CassidyHope123");
+        addUsersPage.usersUsernameTextInput("Pureshka");
         addUsersPage.usersPasswordTextInput("password1");
         addUsersPage.usersConfirmedPasswordTextInput("password1");
     }
 
     @And("clicks save")
-    public void clicksSave() {
+    public void clicksSave() throws InterruptedException {
+        Thread.sleep(3000);
         addUsersPage.clickOnSaveButton();
     }
 
     @Then("user sees his new data on Users page")
-    public void userIsObservedHisNewDataOnUsersPage() {
+    public void userSeesHisNewDataOnUsersPage() {
         Assert.assertTrue(usersPage.checkIfNameDisplayed("Cassidy Hope"));
     }
 
     @When("user clicks on [Username] field")
     public void userClicksOnUsernameField() {
-        usersPage.clickOnUsernameField("Cassidy Hope");
+        usersPage.enterUsername("Pureshka");
     }
 
     @And("click on Search button")
-    public void clickOnSearchButton() {
+    public void clickOnSearchButton() throws InterruptedException {
+        Thread.sleep(3000);
         addUsersPage.clickOnSearchButton();
     }
 
@@ -118,7 +120,7 @@ public class NewUser {
 
     @When("user ticks his <Username>")
     public void userTicksHisUsername() {
-        usersPage.clickUsernameCheckbox("CassidyHope123");
+        usersPage.clickUsernameCheckbox("Pureshka");
     }
 
     @And("clicks Delete button")
