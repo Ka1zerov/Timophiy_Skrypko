@@ -23,7 +23,7 @@ public class AddUsersPage {
     @FindBy(xpath = "//*[@id=\"btnSave\"]")
     WebElement saveButton;
 
-    @FindBy(xpath = "//*[@id=\"btnSearch\"]")
+    @FindBy(xpath = "//*[@id=\"searchBtn\"]")
     WebElement searchButton;
 
     WebDriver driver;
