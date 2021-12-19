@@ -8,7 +8,7 @@ import static io.restassured.config.EncoderConfig.encoderConfig;
 
 public class Specification {
     private static final String BASE_URL = "https://api.dropboxapi.com";
-    private static String token = "sl.A-fTDI1SFvUdY1tkVnBzJ6t8x7P0ap6WpmK0Zmz9QOjHhAH0ep2SlBj4-kS0I6YI3vKL8z5PqfsNW6PFBBg3ZiKcRrJYwEsolL-FyYTR-tgSGF-ef8hN8D-GlYLyq5YonXBwPbC8Lor6";
+    private static String token = "UpMP4Un1mYEAAAAAAAAAAS5Z-C7nNpQ7T4Yu58AaY_G0yteV79OQqDq9aDV4ZBqj";
 
     public static RequestSpecification REQ_SPEC =
             new RequestSpecBuilder()
