@@ -1,0 +1,4 @@
+1. Download the project;
+2. Open the terminal (in project folder);
+3. Enter "mvn clean test".
+4. Enjoy!
